@@ -1,0 +1,347 @@
+<<<<<<< HEAD
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Tugas Mandiri IPA Terpadu</title>  
+  <style>  
+    body {  
+      display: flex;  
+      flex-direction: column;  
+      justify-content: center;  
+      align-items: center;  
+      min-height: 100vh;  
+      margin: 0;  
+      background-color: #f2f2f2; /* Warna abu-abu muda */  
+      position: relative;  
+      font-family: Arial, sans-serif;  
+    }  
+
+    .container {  
+      text-align: center;  
+      margin-bottom: 20px;  
+    }  
+
+    h1 {  
+      background-color: purple;  
+      color: white;  
+      padding: 10px 20px;  
+      border-radius: 5px;  
+      display: inline-block;  
+      box-shadow: 0 0 5px white;  
+      margin-bottom: 20px; /* Memberi jarak antara judul dan tombol */  
+    }  
+
+    .form-button-container {  
+      margin-bottom: 20px; /* Memberi jarak antara tombol dan form */  
+    }  
+
+    .form-button {  
+      background-color: #4CAF50; /* Warna hijau */  
+      color: white;  
+      padding: 10px 20px;  
+      border: none;  
+      border-radius: 5px;  
+      cursor: pointer;  
+      font-size: 16px;  
+    }  
+
+    .form-button:hover {  
+      background-color: #3e8e41;  
+    }  
+
+    iframe {  
+      width: 90%;  
+      max-width: 1740px;  
+      height: 1900px; /* Kurangi tinggi iframe sebesar 1 cm */  
+      border: none;  
+      margin-bottom: 20px;  
+      display: none; /* Sembunyikan iframe secara default */  
+    }  
+
+    .warning-button {  
+      background-color: #f44336;  
+      color: white;  
+      padding: 10px 20px;  
+      border: none;  
+      border-radius: 5px;  
+      cursor: pointer;  
+      font-size: 16px;  
+      margin-top: 20px; /* Menambahkan margin atas untuk menempatkan tombol di bawah formulir */  
+      display: none; /* Sembunyikan tombol secara default */  
+    }  
+
+    .warning-button:hover {  
+      background-color: #d32f2f;  
+    }  
+
+    #timer {  
+      position: absolute;  
+      top: 10px;  
+      right: 10px;  
+      font-size: 20px;  
+      color: red;  
+      background-color: white;  
+      padding: 5px;  
+      border-radius: 5px;  
+    }  
+
+    footer {  
+      position: absolute;  
+      bottom: 0;  
+      width: 100%;  
+      display: flex;  
+      justify-content: space-between;  
+      background-color: black;  
+      color: white;  
+      padding: 10px 20px;  
+      font-size: 12px;  
+      font-family: Arial, sans-serif;  
+    }  
+
+  </style>  
+</head>  
+<body>  
+  <div class="container">  
+    <h1>Tugas Mandiri IPA Terpadu</h1>  
+    <div class="form-button-container">  
+      <button class="form-button" onclick="tampilkanForm()">Klik untuk melanjutkan</button>  
+    </div>  
+  </div>  
+
+  <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSe-9wgPdjwTMeEGu7j9PjlBWnFLiP4Gr7DUSsdBIkM4TBPmAQ/viewform?embedded=true">Memuat…</iframe>  
+
+  <button class="warning-button" onclick="kembaliKeHalamanAwal()">Klik untuk mengakhiri Ujian</button>  
+
+  <div id="timer">Waktu: 60:00</div>  
+
+  <footer>  
+    <span>Copyright &copy; Ahmad Zikrillah_2025</span>  
+    <span>Powered By Microsoft Learn, Grow with Google, and Khan Academy</span>  
+  </footer>  
+
+  <script>  
+    let timeLeft = 3600; // 60 menit dalam detik  
+    let timerInterval;  
+
+    function tampilkanForm() {  
+      const iframe = document.getElementById('googleForm');  
+      iframe.style.display = 'block';  
+
+      const tombolFormContainer = document.querySelector('.form-button-container');  
+      tombolFormContainer.style.display = 'none';  
+
+      // Menampilkan tombol "Klik untuk mengakhiri Ujian"  
+      const tombolAkhiriUjian = document.querySelector('.warning-button');  
+      tombolAkhiriUjian.style.display = 'block';  
+
+      startTimer(); // Memulai timer saat tombol diklik  
+    }  
+
+    function startTimer() {  
+      const timerElement = document.getElementById("timer");  
+      timerElement.style.color = 'red'; // Ubah warna teks timer menjadi merah  
+
+      timerInterval = setInterval(function() {  
+        timeLeft--;  
+
+        let minutes = Math.floor(timeLeft / 60);  
+        let seconds = timeLeft % 60;  
+
+        // Menambahkan angka 0 di depan jika menit atau detik kurang dari 10  
+        minutes = minutes < 10 ? "0" + minutes : minutes;  
+        seconds = seconds < 10 ? "0" + seconds : seconds;  
+
+        timerElement.innerText = "Waktu: " + minutes + ":" + seconds;  
+
+        if (timeLeft <= 0) {  
+          clearInterval(timerInterval);  
+          timerElement.innerText = "Waktu Habis!";  
+          // Tambahkan logika di sini untuk menangani apa yang terjadi saat waktu habis, misalnya, menonaktifkan formulir.  
+        }  
+      }, 1000); // Memperbarui setiap 1 detik  
+    }  
+
+    function kembaliKeHalamanAwal() {  
+      // Ganti "halaman_kedua.html" dengan URL halaman kedua yang sebenarnya  
+      window.location.href = "halaman_kedua.html";  
+    }  
+
+  </script>  
+</body>  
+</html>
+=======
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Tugas Mandiri IPA Terpadu</title>  
+  <style>  
+    body {  
+      display: flex;  
+      flex-direction: column;  
+      justify-content: center;  
+      align-items: center;  
+      min-height: 100vh;  
+      margin: 0;  
+      background-color: #f2f2f2; /* Warna abu-abu muda */  
+      position: relative;  
+      font-family: Arial, sans-serif;  
+    }  
+
+    .container {  
+      text-align: center;  
+      margin-bottom: 20px;  
+    }  
+
+    h1 {  
+      background-color: purple;  
+      color: white;  
+      padding: 10px 20px;  
+      border-radius: 5px;  
+      display: inline-block;  
+      box-shadow: 0 0 5px white;  
+      margin-bottom: 20px; /* Memberi jarak antara judul dan tombol */  
+    }  
+
+    .form-button-container {  
+      margin-bottom: 20px; /* Memberi jarak antara tombol dan form */  
+    }  
+
+    .form-button {  
+      background-color: #4CAF50; /* Warna hijau */  
+      color: white;  
+      padding: 10px 20px;  
+      border: none;  
+      border-radius: 5px;  
+      cursor: pointer;  
+      font-size: 16px;  
+    }  
+
+    .form-button:hover {  
+      background-color: #3e8e41;  
+    }  
+
+    iframe {  
+      width: 90%;  
+      max-width: 1740px;  
+      height: 1900px; /* Kurangi tinggi iframe sebesar 1 cm */  
+      border: none;  
+      margin-bottom: 20px;  
+      display: none; /* Sembunyikan iframe secara default */  
+    }  
+
+    .warning-button {  
+      background-color: #f44336;  
+      color: white;  
+      padding: 10px 20px;  
+      border: none;  
+      border-radius: 5px;  
+      cursor: pointer;  
+      font-size: 16px;  
+      margin-top: 20px; /* Menambahkan margin atas untuk menempatkan tombol di bawah formulir */  
+      display: none; /* Sembunyikan tombol secara default */  
+    }  
+
+    .warning-button:hover {  
+      background-color: #d32f2f;  
+    }  
+
+    #timer {  
+      position: absolute;  
+      top: 10px;  
+      right: 10px;  
+      font-size: 20px;  
+      color: red;  
+      background-color: white;  
+      padding: 5px;  
+      border-radius: 5px;  
+    }  
+
+    footer {  
+      position: absolute;  
+      bottom: 0;  
+      width: 100%;  
+      display: flex;  
+      justify-content: space-between;  
+      background-color: black;  
+      color: white;  
+      padding: 10px 20px;  
+      font-size: 12px;  
+      font-family: Arial, sans-serif;  
+    }  
+
+  </style>  
+</head>  
+<body>  
+  <div class="container">  
+    <h1>Tugas Mandiri IPA Terpadu</h1>  
+    <div class="form-button-container">  
+      <button class="form-button" onclick="tampilkanForm()">Klik untuk melanjutkan</button>  
+    </div>  
+  </div>  
+
+  <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSe-9wgPdjwTMeEGu7j9PjlBWnFLiP4Gr7DUSsdBIkM4TBPmAQ/viewform?embedded=true">Memuat…</iframe>  
+
+  <button class="warning-button" onclick="kembaliKeHalamanAwal()">Klik untuk mengakhiri Ujian</button>  
+
+  <div id="timer">Waktu: 60:00</div>  
+
+  <footer>  
+    <span>Copyright &copy; Ahmad Zikrillah_2025</span>  
+    <span>Powered By Microsoft Learn, Grow with Google, and Khan Academy</span>  
+  </footer>  
+
+  <script>  
+    let timeLeft = 3600; // 60 menit dalam detik  
+    let timerInterval;  
+
+    function tampilkanForm() {  
+      const iframe = document.getElementById('googleForm');  
+      iframe.style.display = 'block';  
+
+      const tombolFormContainer = document.querySelector('.form-button-container');  
+      tombolFormContainer.style.display = 'none';  
+
+      // Menampilkan tombol "Klik untuk mengakhiri Ujian"  
+      const tombolAkhiriUjian = document.querySelector('.warning-button');  
+      tombolAkhiriUjian.style.display = 'block';  
+
+      startTimer(); // Memulai timer saat tombol diklik  
+    }  
+
+    function startTimer() {  
+      const timerElement = document.getElementById("timer");  
+      timerElement.style.color = 'red'; // Ubah warna teks timer menjadi merah  
+
+      timerInterval = setInterval(function() {  
+        timeLeft--;  
+
+        let minutes = Math.floor(timeLeft / 60);  
+        let seconds = timeLeft % 60;  
+
+        // Menambahkan angka 0 di depan jika menit atau detik kurang dari 10  
+        minutes = minutes < 10 ? "0" + minutes : minutes;  
+        seconds = seconds < 10 ? "0" + seconds : seconds;  
+
+        timerElement.innerText = "Waktu: " + minutes + ":" + seconds;  
+
+        if (timeLeft <= 0) {  
+          clearInterval(timerInterval);  
+          timerElement.innerText = "Waktu Habis!";  
+          // Tambahkan logika di sini untuk menangani apa yang terjadi saat waktu habis, misalnya, menonaktifkan formulir.  
+        }  
+      }, 1000); // Memperbarui setiap 1 detik  
+    }  
+
+    function kembaliKeHalamanAwal() {  
+      // Ganti "halaman_kedua.html" dengan URL halaman kedua yang sebenarnya  
+      window.location.href = "halaman_kedua.html";  
+    }  
+
+  </script>  
+</body>  
+</html>
+>>>>>>> 4c8d70ebbe1cadbbbecb587270687908da9b3644
