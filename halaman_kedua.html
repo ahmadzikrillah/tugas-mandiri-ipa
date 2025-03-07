@@ -1,0 +1,88 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Selamat</title>  
+  <style>  
+    body {  
+      display: flex;  
+      flex-direction: column;  
+      justify-content: center;  
+      align-items: center;  
+      min-height: 100vh;  
+      margin: 0;  
+      background-color: #f2f2f2; /* Warna abu-abu muda */  
+      text-align: center;  
+      font-family: Arial, sans-serif;  
+    }  
+
+    h1 {  
+      background-color: purple;  
+      color: white;  
+      padding: 20px 40px;  
+      border-radius: 10px;  
+      display: inline-block;  
+      box-shadow: 0 0 10px white;  
+      margin-bottom: 30px;  
+    }  
+
+    p {  
+      font-size: 20px;  
+      color: black;  
+      margin-bottom: 30px;  
+      padding: 0 20px;  
+      line-height: 1.6;  
+    }  
+
+    .button-container {  
+      margin-top: 20px;  
+    }  
+
+    .button {  
+      background-color: #4CAF50;  
+      color: white;  
+      padding: 10px 20px;  
+      border: none;  
+      border-radius: 5px;  
+      cursor: pointer;  
+      font-size: 16px;  
+    }  
+
+    .button:hover {  
+      background-color: #3e8e41;  
+    }  
+
+    .mentor {  
+      font-size: 18px;  
+      color: black;  
+      margin-top: 40px;  
+      padding: 0 20px;  
+      line-height: 1.6;  
+    }  
+
+    .mentor .name {  
+      font-size: 16px;  
+      font-weight: bold;  
+    }  
+
+  </style>  
+</head>  
+<body>  
+  <h1>Selamat Anda telah menyelesaikan tugas mandiri</h1>  
+  <p>Tetap semangat belajar, Sukses dimulai dari kemauan dan niat yang konsisten. Mulailah dari hal yang paling mudah dan selalu membiasakan diri dengan membaca Basmalah sebelum bekerja. Terima Kasih</p>  
+
+  <div class="button-container">  
+    <button class="button" onclick="kembaliKeHalamanAwal()">Kembali ke Halaman Utama</button>  
+  </div>  
+
+  <p class="mentor">Pembimbing: <span class="name">Ahmad Zikrillah</span></p>  
+
+  <script>  
+    function kembaliKeHalamanAwal() {  
+      // Ganti "URL_HALAMAN_UTAMA" dengan URL halaman utama yang sebenarnya  
+      window.location.href = "URL_HALAMAN_UTAMA";  
+    }  
+  </script>  
+</body>  
+</html>
